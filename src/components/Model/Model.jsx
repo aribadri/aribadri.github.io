@@ -12,7 +12,7 @@ export function Suzi({ model }) {
     const t = clock.getElapsedTime();
     modelRef1.current.rotation.y += 0.0015;
   });
-   console.log(model);
+
 
 
   return (

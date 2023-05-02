@@ -65,7 +65,7 @@ canvas {
   width: 3.65vw;
   height: 3.65vw;
   margin-left: 0.2vw;
-  background: url("arBtn.png");
+  background: url("../public/arBtn.png");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
