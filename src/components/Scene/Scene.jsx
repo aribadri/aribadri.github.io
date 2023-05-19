@@ -55,7 +55,6 @@ export default function Scene() {
       </div> */}
       <div className="ar__btn" >
         <model-viewer
-          style={{ opacity: 1, width: '100%', height:'100%', top:'0', left:'0', zIndex: 100 }}
           ar-modes="webxr scene-viewer quick-look"
           src="barrel.glb"
           alt=""
