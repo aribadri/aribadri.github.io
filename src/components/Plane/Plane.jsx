@@ -1,5 +1,7 @@
 import { useThree } from "@react-three/fiber";
 import { useRef } from "react";
+import { MeshReflectorMaterial, MeshWobbleMaterial } from '@react-three/drei'
+
 
 import { MeshStandardMaterial, MeshPhysicalMaterial, TextureLoader, CubeTextureLoader } from "three";
 
@@ -20,18 +22,35 @@ export function Plane(props) {
   envMap.mapping = 300; // Настраиваем формат карты окружения
 
   return (
-    <mesh 
-    refractionRatio={1.75} clipBias={0.5}
-    visible={true}
-    receiveShadow
-    castShadow
-    shadows
-     rotation={[-Math.PI / 2, 0, 0]} position={[0, -2.6, 0]} ref={ref} >
-      <planeGeometry attach="geometry" args={[100, 205]} 
-    scale={3}
+    <>
+      <mesh
+        receiveShadow // Включаем принятие теней
+        {...props}
+        rotation={[-Math.PI / 2, 0, 0]} position={[0, -2.6, 0]} ref={ref} >
+        <planeGeometry attach="geometry" args={[1000, 2050]}
+          scale={10}
+        />
+        <MeshReflectorMaterial
+          blur={[300, 300]}
+          resolution={1024}
+          mixBlur={.77}
+          mixStrength={40}
+          roughness={.9}
+          depthScale={1.2}
+          minDepthThreshold={1}
+          maxDepthThreshold={1}
+          color="#101010"
+          // metalness={.7}
+          // envMap={envMap}
+        />
+     
 
-       />
-      <meshPhysicalMaterial envMap={envMap} metalness={1} color={'black'} roughness={.99}   />
-    </mesh>
+        {/* <meshStandardMaterial envMap={envMap} metalness={0.9} color={'black'} roughness={.99} attach={'material'}   /> */}
+      </mesh>
+
+
+
+
+    </>
   );
 }
