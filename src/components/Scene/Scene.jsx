@@ -1,5 +1,5 @@
 import { Canvas,useFrame } from "@react-three/fiber";
-import { Environment,Lightformer, useGLTF, PresentationControls } from "@react-three/drei";
+import { Environment, useGLTF } from "@react-three/drei";
 import { useState, useMemo } from "react";
 import { Suzi } from "../Model/Model";
 import gsap from "gsap";
@@ -10,25 +10,28 @@ import "@google/model-viewer/dist/model-viewer"
 import * as THREE from 'three'
 
 
+
+
 // import { Loader } from "../Loader/Loader";
 
 export default function Scene() {
-  const [model, setModel] = useState(useGLTF("barrel.glb"));
+  const [model, setModel] = useState(useGLTF("bike_b1.glb"));
 
 
   const canvasRef = useRef();
   const [activeBikeBtn, setActiveBikeBtn] = useState(1);
 
   // const loader = new GLTFLoader();
+  
   const loader = useMemo(() => new GLTFLoader(), [model]);
 
   const changeBike = async (number) => {
     setActiveBikeBtn(number);
     gsap.to(".shadowLayer", { duration: 2, opacity: 1 });
-    const loadedData = await loader.loadAsync(`barrel.glb`);
+    // const loadedData = await loader.loadAsync(`bike_b1.glb`);
 
     setTimeout(() => {
-      setModel(loadedData);
+      // setModel(loadedData);
       gsap.to(".shadowLayer", { duration: 2, opacity: 0 });
     }, 2000);
   };
@@ -43,7 +46,7 @@ export default function Scene() {
 
   return (
     <>
-      {/* <div className="title">PROJECTS
+      <div className="title">PROJECTS
       </div>
       <div className="bike__name">CYBERPUNK 2077</div>
       <div className="bike__descritpion">
@@ -52,24 +55,24 @@ export default function Scene() {
         CC:650
         <br />
         Y: 2012
-      </div> */}
+      </div>
       <div className="ar__btn" >
         <model-viewer
+          style={{ opacity: 0, position: 'absolute' }}
           ar-modes="webxr scene-viewer quick-look"
-          src="barrel.glb"
+          src="2.glb"
           alt=""
           shadow-intensity="1"
           ar
         ></model-viewer>
 
-        {/* <div className="ar__logo"></div> */}
+        <div className="ar__logo"></div>
         <div className="ar__text">
           WATCH IN AR</div>
       </div>
-    
-      {/* <div className="bike__price">PRICE:</div>
-      <div className="bike__price_count">9000$</div> */}
-      {/* <div className="bikes__tag_container">
+      <div className="bike__price">PRICE:</div>
+      <div className="bike__price_count">9000$</div>
+      <div className="bikes__tag_container">
         <div className="bike__slider">
           <div
             className={activeBikeBtn !== 1 ? "bike__tag1" : "bike__tag1_active"}
@@ -90,10 +93,10 @@ export default function Scene() {
             supermoto
           </div>
         </div>
-      </div> */}
+      </div>
       <div className="shadowLayer"></div>
       <Canvas shadows dpr={[1, 2]} camera={{ position: [0, 0.005, 10], fov: 75, }}>
-        <color attach="background" args={['#010101']} />
+        <color attach="background" args={['#000']} />
         <fog attach="fog" args={['#101010', 10, 100000]} />
         <directionalLight intensity={0.01}
 
@@ -107,24 +110,8 @@ export default function Scene() {
         />
         <pointLight intensity={.5} position={[0, 15, -30]} />
         <ambientLight intensity={0.1} color={"#fffff"} />
-        <PresentationControls speed={1.5} global zoom={0.7} polar={[-0.1, Math.PI / 4]}>
           <Suzi model={model.scene} />
-        </PresentationControls>
-        <Environment resolution={512}>
-        {/* Ceiling */}
-        <Lightformer intensity={2} rotation-x={Math.PI / 2} position={[0, 4, -9]} scale={[10, 1, 1]} />
-        <Lightformer intensity={2} rotation-x={Math.PI / 2} position={[0, 4, -6]} scale={[10, 1, 1]} />
-        <Lightformer intensity={2} rotation-x={Math.PI / 2} position={[0, 4, -3]} scale={[10, 1, 1]} />
-        <Lightformer intensity={2} rotation-x={Math.PI / 2} position={[0, 4, 0]} scale={[10, 1, 1]} />
-        <Lightformer intensity={2} rotation-x={Math.PI / 2} position={[0, 4, 3]} scale={[10, 1, 1]} />
-        <Lightformer intensity={2} rotation-x={Math.PI / 2} position={[0, 4, 6]} scale={[10, 1, 1]} />
-        <Lightformer intensity={2} rotation-x={Math.PI / 2} position={[0, 4, 9]} scale={[10, 1, 1]} />
-        {/* Sides */}
-        <Lightformer intensity={2} rotation-y={Math.PI / 2} position={[-50, 2, 0]} scale={[100, 2, 1]} />
-        <Lightformer intensity={2} rotation-y={-Math.PI / 2} position={[50, 2, 0]} scale={[100, 2, 1]} />
-        {/* Key */}
-        <Lightformer form="ring" color="red" intensity={10} scale={2} position={[10, 5, 10]} onUpdate={(self) => self.lookAt(0, 0, 0)} />
-      </Environment>
+        <Environment preset="city" />
         <Plane />
         <CameraRig />
        

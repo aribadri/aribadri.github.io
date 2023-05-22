@@ -1,0 +1,23 @@
+{
+  "name": "three-dracoloader",
+  "version": "0.0.1",
+  "description": "three.js dracoloader wrapped as a module for easy importing",
+  "main": "index.js",
+  "author": "sky <douchuanwei.com>",
+  "license": "MIT",
+  "private": false,
+  "keywords": [
+    "three",
+    "three.js",
+    "gltf",
+    "gltf2",
+    "loader",
+    "webgl",
+    "es6",
+    "ts",
+    "typescript"
+  ],
+  "peerDependencies": {
+    "three": ">=0.111.0"
+  }
+}

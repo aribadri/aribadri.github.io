@@ -1560,6 +1560,11 @@ suspend-react@^0.0.8:
   resolved "https://registry.yarnpkg.com/suspend-react/-/suspend-react-0.0.8.tgz#b0740c1386b4eb652f17affe4339915ee268bd31"
   integrity sha512-ZC3r8Hu1y0dIThzsGw0RLZplnX9yXwfItcvaIzJc2VQVi8TGyGDlu92syMB5ulybfvGLHAI5Ghzlk23UBPF8xg==
 
+three-dracoloader@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/three-dracoloader/-/three-dracoloader-0.0.1.tgz#523f0d343db7fd5cda4e2f173a9bc10e418091ca"
+  integrity sha512-A0RaTo+0kUapWA+DYglK615KQ5c+qZAuhUkGd4iOZ9f+Pp7eQHHi9UX2uBHco9N1m4fDLTatu/TF+oaLlZEgOg==
+
 three-mesh-bvh@^0.5.23:
   version "0.5.23"
   resolved "https://registry.yarnpkg.com/three-mesh-bvh/-/three-mesh-bvh-0.5.23.tgz#08e5b629144b48b11acbd433519680e457d398ed"

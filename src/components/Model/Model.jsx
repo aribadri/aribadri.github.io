@@ -16,10 +16,12 @@ export function Suzi({ model }, props) {
 
   useFrame(({ clock }) => {
     const t = clock.getElapsedTime();
-    modelRef1.current.rotation.y += 0.0025;
+    modelRef1.current.rotation.y -= 0.0025;
 
   });
   console.log(model);
+
+  
 
 
   return (
@@ -28,11 +30,9 @@ export function Suzi({ model }, props) {
       <primitive
         object={model}
         ref={modelRef1}
-        // position={[0, -2.5, 2]} //for bikes
-        position={[0, 0, 2]}
-
+        position={[0, -2.5, 2]}
         // rotation={[-0, 3.9, 0.2]}
-        scale={3.0275}
+        scale={2.9275}
       />
     </>
   );

@@ -1,6 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
-@import url(https://allfont.net/allfont.css?fonts=europeext-normal);
-@import url(https://allfont.net/allfont.css?fonts=europeext-bold);
+/* @import url(https://allfont.net/allfont.css?fonts=europeext-normal);
+@import url(https://allfont.net/allfont.css?fonts=europeext-bold); */
+@font-face {
+  font-family: 'Druk';
+  font-weight: normal;
+  src: url('./fonts/Druk.otf');
+}
 
 html,
 body,
@@ -25,7 +30,7 @@ canvas {
   left: 2.34vw;
   /* top: 28.12%; */
   bottom: 64.82%;
-  font-family: "EuropeExt Bold";
+  font-family: Druk;
 
   font-weight: 500;
   font-size: 2.36vw;
@@ -92,13 +97,13 @@ canvas {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 97.5vw;
+  width: 9.5vw;
   height: 16.23%;
-  top: 9.3%;
-  font-family: "EuropeExt Bold";
+  top: 2.3%;
+  font-family: Druk;
   font-style: normal;
-  font-weight: 800;
-  font-size: 14.02vw;
+  font-weight: 600;
+  font-size: 12.2vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -285,12 +290,12 @@ canvas {
   .title {
     width: 100vw;
     height: 7.1%;
-    top: 7.51%;
+    top: 4.51%;
     opacity: 1;
-    font-family: "EuropeExt Bold";
+    font-family: "Druk";
 
     font-weight: 800;
-    font-size: 14.32vw;
+    font-size: 12.2vw;
   }
   .ar__btn {
     font-weight: 500;

@@ -24,7 +24,8 @@
     "react-model-viewer": "^0.6.1",
     "react-slick": "^0.29.0",
     "react-spring": "^9.7.1",
-    "three": "^0.151.3"
+    "three": "^0.151.3",
+    "three-dracoloader": "^0.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

@@ -40,8 +40,8 @@ export function Plane(props) {
           minDepthThreshold={1}
           maxDepthThreshold={1}
           color="#101010"
-          // metalness={.7}
-          // envMap={envMap}
+          metalness={.7}
+          envMap={envMap}
         />
      
 
