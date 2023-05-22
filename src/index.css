@@ -4,7 +4,7 @@
 @font-face {
   font-family: 'Druk';
   font-weight: normal;
-  src: url('./fonts/Druk.otf');
+  src: url('./fonts/EuropeExt-Bold.otf');
 }
 
 html,
@@ -99,11 +99,11 @@ canvas {
   transform: translateX(-50%);
   width: 9.5vw;
   height: 16.23%;
-  top: 2.3%;
+  top: 5.3%;
   font-family: Druk;
-  font-style: normal;
+  font-style: bold;
   font-weight: 600;
-  font-size: 12.2vw;
+  font-size: 14.5vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -295,7 +295,7 @@ canvas {
     font-family: "Druk";
 
     font-weight: 800;
-    font-size: 12.2vw;
+    font-size: 14.2vw;
   }
   .ar__btn {
     font-weight: 500;
@@ -327,7 +327,7 @@ canvas {
     width: 46.89vw;
     height: 16.15vw;
     left: 2.54vw;
-    top: 76.164%;
+    top: 79.164%;
     /* bottom: 22.41vh; */
     font-size: 4.35vw;
   }
