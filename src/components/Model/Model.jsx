@@ -21,7 +21,9 @@ export function Suzi({ model }, props) {
   });
   console.log(model);
 
-  
+  setTimeout(() => {
+    
+  }, 500);
 
 
   return (
@@ -32,7 +34,7 @@ export function Suzi({ model }, props) {
         ref={modelRef1}
         position={[0, -2.5, 2]}
         // rotation={[-0, 3.9, 0.2]}
-        scale={2.9275}
+        scale={25.9275}
       />
     </>
   );

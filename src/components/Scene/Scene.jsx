@@ -15,7 +15,7 @@ import * as THREE from 'three'
 // import { Loader } from "../Loader/Loader";
 
 export default function Scene() {
-  const [model, setModel] = useState(useGLTF("bike_b1.glb"));
+  const [model, setModel] = useState(useGLTF("k11-v3.glb"));
 
 
   const canvasRef = useRef();
@@ -28,7 +28,7 @@ export default function Scene() {
   const changeBike = async (number) => {
     setActiveBikeBtn(number);
     gsap.to(".shadowLayer", { duration: 2, opacity: 1 });
-    // const loadedData = await loader.loadAsync(`bike_b1.glb`);
+    // const loadedData = await loader.loadAsync(`BMW_K1.gltf`);
 
     setTimeout(() => {
       // setModel(loadedData);
